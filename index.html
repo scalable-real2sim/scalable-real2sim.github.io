@@ -305,8 +305,9 @@
                   style="padding: 2px; background:#f0f0f0; border:none; font-family: &#39;Noto Sans&#39;, sans-serif; font-size:16px;">
                   <option value="mustard" selected>Mustard Bottle</option>
                   <option value="tomato_can">Tomato Soup Can</option>
+                  <option value="dumbell">Dumbell</option>
                 </select>
-                . Note that the GT Visual Meshes differ from the real-world objects used
+                . Note that the ground truth (GT) Visual Meshes differ from the real-world objects used
                 for reconstruction as the original object version are no longer available
                 for sale. This does not affect the object geometry.
               </p>
@@ -374,6 +375,28 @@
                         style="height: 360px; width: 480px;" alt="Our Visual Mesh"
                         src="./static/models/tomaot_soup_can.glb" ar camera-controls auto-rotate
                         rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="visual dumbell" style="display: none;"> <!-- Start hidden -->
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column has-text-centered">
+                    <div class="content is-centered">
+                      <p>No GT mesh exists for this object.</p>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" orientation="180deg 0deg 0deg"
+                        style="height: 360px; width: 480px;" alt="Our Visual Mesh" src="./static/models/dumbell.glb" ar
+                        camera-controls auto-rotate rotation-per-second="40deg" camera-orbit="auto auto 5%"
+                        ar-status="not-presenting">
                       </model-viewer>
                     </div>
                   </div>
