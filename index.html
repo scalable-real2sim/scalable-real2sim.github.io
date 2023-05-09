@@ -207,8 +207,8 @@
               object. This asset comprises collision geometry, visual geometry, and physical properties. Our pipeline
               consists of a robotic system for automatically collecting multi-view RGB images of a real-world object. We
               then mask out the object of interest using a segmentation network and use these masked images to train a
-              state-of-the-art geometric reconstruction network. To obtain the visual geometry, we extract a mesh, which
-              represents geometry as a set of vertices and faces, and a texture map from the reconstruction network's
+              state-of-the-art geometric reconstruction network. To obtain the visual geometry, we extract a triangle
+              mesh and a texture map from the reconstruction network's
               representation. To obtain the collision geometry, we propose to approximate this mesh with primitive
               shapes, such as boxes and cylinders. We obtain the object's physical properties by measuring its mass and
               computing the center of mass and moment of inertia using a uniform density assumption.
