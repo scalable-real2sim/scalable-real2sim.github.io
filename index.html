@@ -372,6 +372,10 @@
                 <select id="collision-dumbell-selector" class="mesh dumbell"
                   style="padding: 2px; background:#f0f0f0; border:none; font-family: &#39;Noto Sans&#39;, sans-serif; font-size:16px; display: none;">
                   <option value="coacd" selected>CoACD</option>
+                  <option value="cylinders_3">3 Cylinders</option>
+                  <option value="boxes_10">10 Boxes</option>
+                  <option value="rotated_boxes_50">50 Rotated Boxes</option>
+                  <option value="spheres_128">128 Spheres</option>
                 </select>
                 collision geometry.
               </p>
@@ -502,7 +506,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="collision-tomato rotated_boxed_50" style="display: none;">
+                  <div class="collision-tomato rotated_boxes_50" style="display: none;">
                     <div class="column">
                       <div class="content is-centered">
                         <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
@@ -563,18 +567,48 @@
                     <div class="column">
                       <div class="content is-centered">
                         <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
-                          src="./static/models/longsofa.glb" ar camera-controls auto-rotate rotation-per-second="40deg"
-                          camera-orbit="auto auto 5%" ar-status="not-presenting">
+                          src="./static/models/dumbell/coacd.glb" ar camera-controls auto-rotate
+                          rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                         </model-viewer>
                       </div>
                     </div>
                   </div>
-                  <div class="collision-dumbell spheres" style="display: none;">
+                  <div class="collision-dumbell cylinders_3" style="display: none;">
                     <div class="column">
                       <div class="content is-centered">
                         <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
-                          src="./static/models/longsofa.glb" ar camera-controls auto-rotate rotation-per-second="40deg"
-                          camera-orbit="auto auto 5%" ar-status="not-presenting">
+                          src="./static/models/dumbell/cylinders_3.glb" ar camera-controls auto-rotate
+                          rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        </model-viewer>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="collision-dumbell boxes_10" style="display: none;">
+                    <div class="column">
+                      <div class="content is-centered">
+                        <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                          src="./static/models/dumbell/boxes_10.glb" ar camera-controls auto-rotate
+                          rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        </model-viewer>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="collision-dumbell rotated_boxes_50" style="display: none;">
+                    <div class="column">
+                      <div class="content is-centered">
+                        <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                          src="./static/models/dumbell/rotated_boxes_50.glb" ar camera-controls auto-rotate
+                          rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        </model-viewer>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="collision-dumbell spheres_128" style="display: none;">
+                    <div class="column">
+                      <div class="content is-centered">
+                        <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                          src="./static/models/dumbell/spheres_128.glb" ar camera-controls auto-rotate
+                          rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                         </model-viewer>
                       </div>
                     </div>
