@@ -168,57 +168,6 @@
     </div>
   </section>
 
-
-  <!-- <section class="hero is-light is-small">
-    <div class="hero-body">
-      <div class="container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/steve.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-chair-tp">
-            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/chair-tp.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-shiba">
-            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/shiba.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-fullbody">
-            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/fullbody.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-blueshirt">
-            <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/blueshirt.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-mask">
-            <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/mask.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-coffee">
-            <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/coffee.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-toby">
-            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/toby2.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Abstract. -->
@@ -320,7 +269,7 @@
                     <div class="content is-centered">
                       <model-viewer class="is-centered" orientation="180deg 0deg 0deg"
                         style="height: 360px; width: 480px;" alt="GT Visual Mesh"
-                        src="./static/models/gt_mustard_bottle.glb" ar camera-controls auto-rotate
+                        src="./static/models/mustard/gt_mustard_bottle.glb" ar camera-controls auto-rotate
                         rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
@@ -331,7 +280,7 @@
                     <div class="content is-centered">
                       <model-viewer class="is-centered" orientation="180deg 0deg 0deg"
                         style="height: 360px; width: 480px;" alt="Our Visual Mesh"
-                        src="./static/models/mustard_bottle.glb" ar camera-controls auto-rotate
+                        src="./static/models/mustard/mustard_bottle.glb" ar camera-controls auto-rotate
                         rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
@@ -346,7 +295,7 @@
                     <div class="content is-centered">
                       <model-viewer class="is-centered" orientation="180deg 0deg 0deg"
                         style="height: 360px; width: 480px;" alt="GT Visual Mesh"
-                        src="./static/models/gt_tomato_soup_can.glb" ar camera-controls auto-rotate
+                        src="./static/models/tomato_soup_can/gt_tomato_soup_can.glb" ar camera-controls auto-rotate
                         rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
@@ -357,7 +306,7 @@
                     <div class="content is-centered">
                       <model-viewer class="is-centered" orientation="180deg 0deg 0deg"
                         style="height: 360px; width: 480px;" alt="Our Visual Mesh"
-                        src="./static/models/tomaot_soup_can.glb" ar camera-controls auto-rotate
+                        src="./static/models/tomato_soup_can/tomaot_soup_can.glb" ar camera-controls auto-rotate
                         rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
@@ -378,9 +327,9 @@
                   <div class="column">
                     <div class="content is-centered">
                       <model-viewer class="is-centered" orientation="180deg 0deg 0deg"
-                        style="height: 360px; width: 480px;" alt="Our Visual Mesh" src="./static/models/dumbell.glb" ar
-                        camera-controls auto-rotate rotation-per-second="40deg" camera-orbit="auto auto 5%"
-                        ar-status="not-presenting">
+                        style="height: 360px; width: 480px;" alt="Our Visual Mesh"
+                        src="./static/models/dumbell/dumbell.glb" ar camera-controls auto-rotate
+                        rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
                   </div>
@@ -392,11 +341,31 @@
 
             <!-- Collision geometry. -->
             <div>
-              <p> Visualisation of the raw mustard bottle mesh and the corresponding
-                <select id="collision-selector"
+              <p> Visualisation of the raw
+                <select id="mesh-selector"
+                  style="padding: 2px; background:#f0f0f0; border:none; font-family: &#39;Noto Sans&#39;, sans-serif; font-size:16px;">
+                  <option value="mustard" selected>Mustard Bottle</option>
+                  <option value="tomato_can">Tomato Soup Can</option>
+                  <option value="dumbell">Dumbell</option>
+                </select>
+                mesh and the corresponding
+                <select id="collision-selector" class="mesh mustard"
                   style="padding: 2px; background:#f0f0f0; border:none; font-family: &#39;Noto Sans&#39;, sans-serif; font-size:16px;">
                   <option value="coacd" selected>CoACD</option>
-                  <option value="spheres">Sphere Primitives</option>
+                  <option value="boxes_150">150 Boxes</option>
+                  <option value="rotated_boxes_100">100 Rotated Boxes</option>
+                  <option value="ellipsoids_64">64 Ellipsoids</option>
+                  <option value="spheres_256">256 Spheres</option>
+                  <option value="cylinders_10">10 Cylinders</option>
+                  <option value="mixed_50boxes_50cylinders">50 Boxes & 50 Cylinders</option>
+                </select>
+                <select id="collision-selector" class="mesh tomato_can"
+                  style="padding: 2px; background:#f0f0f0; border:none; font-family: &#39;Noto Sans&#39;, sans-serif; font-size:16px; display: none;">
+                  <option value="coacd" selected>CoACD</option>
+                </select>
+                <select id="collision-selector" class="mesh dumbell"
+                  style="padding: 2px; background:#f0f0f0; border:none; font-family: &#39;Noto Sans&#39;, sans-serif; font-size:16px; display: none;">
+                  <option value="coacd" selected>CoACD</option>
                 </select>
                 collision geometry.
               </p>
@@ -417,68 +386,180 @@
                 </div>
               </div>
 
-              <!-- Use Blender for converting obj to glb -->
-              <div class="collision coacd">
+              <div class="mesh mustard">
                 <div class="columns is-centered">
                   <!-- Wheel -->
                   <div class="column">
                     <div class="content is-centered">
                       <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
-                        src="./static/models/longsofa.glb" ar camera-controls auto-rotate rotation-per-second="40deg"
-                        camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        src="./static/models/mustard/mustard_bottle_no_texture.glb" ar camera-controls auto-rotate
+                        rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
                   </div>
 
                   <!-- Wheel -->
+                  <div class="collision coacd">
+                    <div class="column">
+                      <div class="content is-centered">
+                        <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                          src="./static/models/mustard/coacd.glb" ar camera-controls auto-rotate
+                          rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        </model-viewer>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="collision boxes_150" style="display: none;">
+                    <div class="column">
+                      <div class="content is-centered">
+                        <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                          src="./static/models/mustard/boxes_150.glb" ar camera-controls auto-rotate
+                          rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        </model-viewer>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="collision rotated_boxes_100" style="display: none;">
+                    <div class="column">
+                      <div class="content is-centered">
+                        <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                          src="./static/models/mustard/rotated_boxes_100.glb" ar camera-controls auto-rotate
+                          rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        </model-viewer>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="collision ellipsoids_64" style="display: none;">
+                    <div class="column">
+                      <div class="content is-centered">
+                        <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                          src="./static/models/mustard/ellipsoids_64.glb" ar camera-controls auto-rotate
+                          rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        </model-viewer>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="collision spheres_256" style="display: none;">
+                    <div class="column">
+                      <div class="content is-centered">
+                        <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                          src="./static/models/mustard/spheres_256.glb" ar camera-controls auto-rotate
+                          rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        </model-viewer>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="collision cylinders_10" style="display: none;">
+                    <div class="column">
+                      <div class="content is-centered">
+                        <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                          src="./static/models/mustard/cylinders_10.glb" ar camera-controls auto-rotate
+                          rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        </model-viewer>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="collision mixed_50boxes_50cylinders" style="display: none;">
+                    <div class="column">
+                      <div class="content is-centered">
+                        <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                          src="./static/models/mustard/mixed_50boxes_50cylinders.glb" ar camera-controls auto-rotate
+                          rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        </model-viewer>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="mesh tomato_can" style="display: none;">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
                   <div class="column">
                     <div class="content is-centered">
-                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
-                        src="./static/models/longsofa.glb" ar camera-controls auto-rotate rotation-per-second="40deg"
-                        camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/tomato_soup_can/tomato_soup_can_no_texture.glb" ar camera-controls
+                        auto-rotate rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
                   </div>
+
+                  <!-- Wheel -->
+                  <div class="collision coacd">
+                    <div class="column">
+                      <div class="content is-centered">
+                        <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                          src="./static/models/longsofa.glb" ar camera-controls auto-rotate rotation-per-second="40deg"
+                          camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        </model-viewer>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="collision spheres" style="display: none;">
+                    <div class="column">
+                      <div class="content is-centered">
+                        <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                          src="./static/models/longsofa.glb" ar camera-controls auto-rotate rotation-per-second="40deg"
+                          camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        </model-viewer>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
-            </div>
 
-            <div class="collision spheres" style="display: none;">
-              <div class="columns is-centered">
-                <!-- Wheel -->
-                <div class="column">
-                  <div class="content is-centered">
-                    <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
-                      src="./static/models/longsofa.glb" ar camera-controls auto-rotate rotation-per-second="40deg"
-                      camera-orbit="auto auto 5%" ar-status="not-presenting">
-                    </model-viewer>
+              <div class="mesh dumbell" style="display: none;">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/dumbell_no_texture.glb" ar camera-controls auto-rotate
+                        rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
                   </div>
-                </div>
 
-                <!-- Wheel -->
-                <div class="column">
-                  <div class="content is-centered">
-                    <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
-                      src="./static/models/longsofa.glb" ar camera-controls auto-rotate rotation-per-second="40deg"
-                      camera-orbit="auto auto 5%" ar-status="not-presenting">
-                    </model-viewer>
+                  <!-- Wheel -->
+                  <div class="collision coacd">
+                    <div class="column">
+                      <div class="content is-centered">
+                        <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                          src="./static/models/longsofa.glb" ar camera-controls auto-rotate rotation-per-second="40deg"
+                          camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        </model-viewer>
+                      </div>
+                    </div>
                   </div>
+                  <div class="collision spheres" style="display: none;">
+                    <div class="column">
+                      <div class="content is-centered">
+                        <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                          src="./static/models/longsofa.glb" ar camera-controls auto-rotate rotation-per-second="40deg"
+                          camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        </model-viewer>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
+
             </div>
+            <!--/ Collision geometry. -->
+
+            <!-- Simulation results. -->
+            <!-- TODO: Select as for geometry. Use video or embed meshcat HTML? -->
+
+            <!--/ Simulation results. -->
+
           </div>
-          <!--/ Collision geometry. -->
-
-          <!-- Simulation results. -->
-          <!-- TODO: Select as for geometry. Use video or embed meshcat HTML? -->
-
-          <!--/ Simulation results. -->
-
         </div>
-      </div>
-      <!--/ Results. -->
+        <!--/ Results. -->
 
-    </div>
+      </div>
     </div>
   </section>
 
