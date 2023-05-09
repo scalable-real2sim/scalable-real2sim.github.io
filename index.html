@@ -92,7 +92,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">
-              An automated real2sim system for rapidly creating dynamically accurate simulation assets
+              An automated Real2Sim system for rapidly creating dynamically accurate simulation assets
             </h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
@@ -169,17 +169,6 @@
     </div>
   </section>
 
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <img src="./static/images/system_diagram.jpg">
-        <h2 class="subtitle has-text-centered">
-          Rapidly create physics simulation assets from real-world objects
-        </h2>
-      </div>
-    </div>
-  </section>
-
 
   <!-- <section class="hero is-light is-small">
     <div class="hero-body">
@@ -238,53 +227,51 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
-            <!-- <p>
-              We present the first method capable of photorealistically reconstructing a non-rigidly
-              deforming scene using photos/videos captured casually from mobile phones.
-            </p>
             <p>
-              Our approach augments neural radiance fields
-              (NeRF) by optimizing an
-              additional continuous volumetric deformation field that warps each observed point into a
-              canonical 5D NeRF.
-              We observe that these NeRF-like deformation fields are prone to local minima, and
-              propose a coarse-to-fine optimization method for coordinate-based models that allows for
-              more robust optimization.
-              By adapting principles from geometry processing and physical simulation to NeRF-like
-              models, we propose an elastic regularization of the deformation field that further
-              improves robustness.
+              Training robots in simulation and executing the learned skills in the real world has become a popular
+              framework. Yet, doing so requires practitioners to construct a dynamically accurate digital replica of the
+              real-world scene, which is time-consuming and requires domain expertise.
+              We propose an automated Real2Sim pipeline for rapidly creating such simulation assets for real-world
+              objects. In contrast to previous work, we focus on achieving good simulation performance in highly dynamic
+              tasks, i.e., tasks in which the object is subject to high accelerations and varying contact interactions.
+              Through extensive simulation experiments, we show that our system is capable of producing simulation
+              assets that are both dynamically accurate and fast to simulate.
             </p>
-            <p>
-              We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-              photos/videos into deformable NeRF
-              models that allow for photorealistic renderings of the subject from arbitrary
-              viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-              using a
-              rig with two mobile phones that take time-synchronized photos, yielding train/validation
-              images of the same pose at different viewpoints. We show that our method faithfully
-              reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-              fidelity.
-            </p> -->
-            Abstract tbc.
           </div>
         </div>
       </div>
       <!--/ Abstract. -->
 
-      <!-- Paper video. -->
-      <!-- <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Video</h2>
-          <div class="publication-video">
-            <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0" frameborder="0"
-              allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div> -->
-      <!--/ Paper video. -->
     </div>
   </section>
 
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!-- System Diagram -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">System Overview</h2>
+          <img src="./static/images/system_diagram.jpg">
+          <div class="content has-text-justified">
+            <p>
+              Given a real-world object and an estimate of its mass, our system produces a simulation asset for the
+              object. This asset comprises collision geometry, visual geometry, and physical properties. Our pipeline
+              consists of a robotic system for automatically collecting multi-view RGB images of a real-world object. We
+              then mask out the object of interest using a segmentation network and use these masked images to train a
+              state-of-the-art geometric reconstruction network. To obtain the visual geometry, we extract a mesh, which
+              represents geometry as a set of vertices and faces, and a texture map from the reconstruction network's
+              representation. To obtain the collision geometry, we propose to approximate this mesh with primitive
+              shapes, such as boxes and cylinders. We obtain the object's physical properties by measuring its mass and
+              computing the center of mass and moment of inertia using a uniform density assumption.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ System Diagram -->
+
+    </div>
+  </section>
 
   <section class="section">
     <div class="container is-max-desktop">
@@ -294,7 +281,7 @@
         <!-- Results. -->
         <div class="column">
           <div class="content">
-            <h2 class="title is-3 has-text-centered">Results</h2>
+            <h2 class="title is-3 has-text-centered">Geometric and Visual Reconstruction Results</h2>
 
             <!-- Visual mesh. -->
             <div>
