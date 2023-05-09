@@ -361,15 +361,15 @@
                   <option value="cylinders_10">10 Cylinders</option>
                   <option value="mixed_50boxes_50cylinders">50 Boxes & 50 Cylinders</option>
                 </select>
-                <select id="collision-selector" class="mesh tomato_can"
+                <select id="collision-tomato-selector" class="mesh tomato_can"
                   style="padding: 2px; background:#f0f0f0; border:none; font-family: &#39;Noto Sans&#39;, sans-serif; font-size:16px; display: none;">
                   <option value="coacd" selected>CoACD</option>
-                  <option value="rotated_boxes_50" selected>50 Rotated Boxes</option>
-                  <option value="cylinders_1" selected>1 Cylinder</option>
-                  <option value="boxes_200" selected>200 Boxes</option>
-                  <option value="spheres_128" selected>128 Spheres</option>
+                  <option value="rotated_boxes_50">50 Rotated Boxes</option>
+                  <option value="cylinders_1">1 Cylinder</option>
+                  <option value="boxes_200">200 Boxes</option>
+                  <option value="spheres_128">128 Spheres</option>
                 </select>
-                <select id="collision-selector" class="mesh dumbell"
+                <select id="collision-dumbell-selector" class="mesh dumbell"
                   style="padding: 2px; background:#f0f0f0; border:none; font-family: &#39;Noto Sans&#39;, sans-serif; font-size:16px; display: none;">
                   <option value="coacd" selected>CoACD</option>
                 </select>
@@ -492,7 +492,7 @@
                   </div>
 
                   <!-- Wheel -->
-                  <div class="collision coacd">
+                  <div class="collision-tomato coacd">
                     <div class="column">
                       <div class="content is-centered">
                         <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
@@ -502,7 +502,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="collision rotated_boxed_50" style="display: none;">
+                  <div class="collision-tomato rotated_boxed_50" style="display: none;">
                     <div class="column">
                       <div class="content is-centered">
                         <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
@@ -512,7 +512,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="collision cylinders_1" style="display: none;">
+                  <div class="collision-tomato cylinders_1" style="display: none;">
                     <div class="column">
                       <div class="content is-centered">
                         <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
@@ -522,7 +522,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="collision boxes_200" style="display: none;">
+                  <div class="collision-tomato boxes_200" style="display: none;">
                     <div class="column">
                       <div class="content is-centered">
                         <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
@@ -532,7 +532,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="collision spheres_128" style="display: none;">
+                  <div class="collision-tomato spheres_128" style="display: none;">
                     <div class="column">
                       <div class="content is-centered">
                         <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
@@ -552,14 +552,14 @@
                   <div class="column">
                     <div class="content is-centered">
                       <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
-                        src="./static/models/dumbell_no_texture.glb" ar camera-controls auto-rotate
+                        src="./static/models/dumbell/dumbell_no_texture.glb" ar camera-controls auto-rotate
                         rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
                   </div>
 
                   <!-- Wheel -->
-                  <div class="collision coacd">
+                  <div class="collision-dumbell coacd">
                     <div class="column">
                       <div class="content is-centered">
                         <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
@@ -569,7 +569,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="collision spheres" style="display: none;">
+                  <div class="collision-dumbell spheres" style="display: none;">
                     <div class="column">
                       <div class="content is-centered">
                         <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
