@@ -276,8 +276,8 @@
 
         <!-- Results. -->
         <div class="column">
-          <div class="content has-text-centered has-text-justified">
-            <h2 class="title is-3 has-text-centered">Geometric and Visual Reconstruction Results</h2>
+          <div class="content has-text-centered">
+            <h2 class="title is-3 has-text-centered">Visual and Collision Geometry Examples</h2>
 
             <!-- Visual mesh. -->
             <div>
@@ -288,48 +288,74 @@
                   <option value="tomato_can">Tomato Soup Can</option>
                   <option value="dumbell">Dumbell</option>
                 </select>
-                visual mesh. Note that the ground truth (GT) visual meshes differ from the real-world objects used for
-                reconstruction, as the original object versions are no longer available for sale. This does not affect
-                the object geometry.
+                visual mesh.
               </p>
 
+              <!-- First row -->
               <div class="columns is-centered">
-                <!-- Wheel -->
+                <!-- BundleSDF column -->
                 <div class="column">
                   <div class="content" center="">
-                    <h2 class="title is-5 has-text-centered">GT Visual Mesh</h2>
-                  </div>
-                </div>
-
-                <!-- Wheel -->
-                <div class="column">
-                  <div class="content" center="">
-                    <h2 class="title is-5 has-text-centered">Our Visual Mesh</h2>
-                  </div>
-                </div>
-              </div>
-
-              <!-- https://products.aspose.app/3d/conversion/obj-to-glb -->
-              <div class="visual mustard">
-                <div class="columns is-centered">
-                  <!-- Wheel -->
-                  <div class="column">
+                    <h2 class="title is-5 has-text-centered"><a href="https://bundlesdf.github.io/"
+                        target="_blank">BundleSDF</a> Visual Mesh</h2>
                     <div class="content is-centered">
                       <model-viewer class="is-centered" orientation="180deg 0deg 0deg"
                         style="height: 360px; width: 480px;" alt="GT Visual Mesh"
                         src="./static/models/mustard/gt_mustard_bottle.glb" ar camera-controls auto-rotate
-                        rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
                   </div>
+                </div>
 
-                  <!-- Wheel -->
-                  <div class="column">
+                <!-- Nerfacto column -->
+                <div class="column">
+                  <div class="content" center="">
+                    <h2 class="title is-5 has-text-centered">
+                      <a href="https://docs.nerf.studio/nerfology/methods/nerfacto.html" target="_blank">Nerfacto</a>
+                      Visual Mesh
+                    </h2>
                     <div class="content is-centered">
                       <model-viewer class="is-centered" orientation="180deg 0deg 0deg"
                         style="height: 360px; width: 480px;" alt="Our Visual Mesh"
                         src="./static/models/mustard/mustard_bottle.glb" ar camera-controls auto-rotate
-                        rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Second row -->
+              <div class="columns is-centered">
+                <!-- Neuralangelo column -->
+                <div class="column">
+                  <div class="content" center="">
+                    <h2 class="title is-5 has-text-centered">
+                      <a href="https://research.nvidia.com/labs/dir/neuralangelo/" target="_blank">Neuralangelo</a>
+                      Visual Mesh
+                    </h2>
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" orientation="180deg 0deg 0deg"
+                        style="height: 360px; width: 480px;" alt="Neuralangelo Visual Mesh"
+                        src="./static/models/mustard/mustard_bottle.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Gaussian Frosting column -->
+                <div class="column">
+                  <div class="content" center="">
+                    <h2 class="title is-5 has-text-centered">
+                      <a href="https://anttwo.github.io/frosting/" target="_blank">Gaussian Frosting</a> Visual Mesh
+                    </h2>
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" orientation="180deg 0deg 0deg"
+                        style="height: 360px; width: 480px;" alt="Gaussian Frosting Visual Mesh"
+                        src="./static/models/mustard/mustard_bottle.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
                   </div>
@@ -344,7 +370,7 @@
                       <model-viewer class="is-centered" orientation="180deg 0deg 0deg"
                         style="height: 360px; width: 480px;" alt="GT Visual Mesh"
                         src="./static/models/tomato_soup_can/gt_tomato_soup_can.glb" ar camera-controls auto-rotate
-                        rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
                   </div>
@@ -355,7 +381,7 @@
                       <model-viewer class="is-centered" orientation="180deg 0deg 0deg"
                         style="height: 360px; width: 480px;" alt="Our Visual Mesh"
                         src="./static/models/tomato_soup_can/tomaot_soup_can.glb" ar camera-controls auto-rotate
-                        rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
                   </div>
@@ -377,7 +403,7 @@
                       <model-viewer class="is-centered" orientation="180deg 0deg 0deg"
                         style="height: 360px; width: 480px;" alt="Our Visual Mesh"
                         src="./static/models/dumbell/dumbell.glb" ar camera-controls auto-rotate
-                        rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
                   </div>
@@ -399,7 +425,8 @@
                     <option value="tomato_can">Tomato Soup Can</option>
                     <option value="dumbell">Dumbell</option>
                   </select>
-                  mesh and its corresponding collision geometry.
+                  <a href="https://bundlesdf.github.io/" target="_blank">BundleSDF</a> mesh and its corresponding <a
+                    href="https://github.com/kmammou/v-hacd" target="_blank">V-HACD</a> collision geometry.
                 </p>
               </div>
 
@@ -426,7 +453,7 @@
                     <div class="content is-centered">
                       <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
                         src="./static/models/mustard/mustard_bottle_no_texture.glb" ar camera-controls auto-rotate
-                        rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
                   </div>
@@ -436,7 +463,7 @@
                     <div class="content is-centered">
                       <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
                         src="./static/models/mustard/coacd.glb" ar camera-controls auto-rotate
-                        rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
                   </div>
@@ -450,7 +477,7 @@
                     <div class="content is-centered">
                       <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
                         src="./static/models/tomato_soup_can/tomato_soup_can_no_texture.glb" ar camera-controls
-                        auto-rotate rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        auto-rotate rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
                   </div>
@@ -460,7 +487,7 @@
                     <div class="content is-centered">
                       <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
                         src="./static/models/tomato_soup_can/coacd.glb" ar camera-controls auto-rotate
-                        rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
                   </div>
@@ -474,7 +501,7 @@
                     <div class="content is-centered">
                       <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
                         src="./static/models/dumbell/dumbell_no_texture.glb" ar camera-controls auto-rotate
-                        rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
                   </div>
@@ -484,7 +511,7 @@
                     <div class="content is-centered">
                       <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
                         src="./static/models/dumbell/coacd.glb" ar camera-controls auto-rotate
-                        rotation-per-second="40deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
                   </div>
