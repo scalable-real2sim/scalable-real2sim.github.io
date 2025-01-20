@@ -22,12 +22,20 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+  <!-- <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script> -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick-theme.css" />
+
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-tooltip@1.2.0/dist/bulma-tooltip.min.css">
@@ -38,10 +46,10 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
   <script src="./static/js/vis.js"></script>
+  <script type="text/javascript" src="./static/slick/slick.min.js"></script>
 </head>
 
 <body>
@@ -195,7 +203,7 @@
 
       <!-- System Diagram -->
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
+        <div class="column">
           <h2 class="title is-3">System Overview</h2>
           <img src="./static/images/system_diagram.jpg">
           <div class="content has-text-justified">
@@ -222,24 +230,24 @@
     </div>
   </section>
 
-  <section class="section"></section>
-  <div class="container is-max-desktop">
-    <!-- Pipeline Iteration Video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Pipeline Iteration Video</h2>
-        <p>The following video shows a single pipeline iteration.</p>
-        <!-- <p>The video has been sped up by a factor of 20.</p> -->
-        <br>
-        <div class="content has-text-centered">
-          <video id="replay-video" controls muted preload playsinline width="75%">
-            <source src="./static/videos/robot_scanning_20x.mp4" type="video/mp4">
-          </video>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Pipeline Iteration Video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Pipeline Iteration Video</h2>
+          <p>The following video shows a single pipeline iteration.</p>
+          <!-- <p>The video has been sped up by a factor of 20.</p> -->
+          <br>
+          <div class="content has-text-centered">
+            <video id="replay-video" controls muted preload playsinline width="75%">
+              <source src="./static/videos/robot_scanning_20x.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
       </div>
+      <!--/ Pipeline Iteration Video. -->
     </div>
-    <!--/ Pipeline Iteration Video. -->
-  </div>
   </section>
 
   <section class="section">
@@ -249,7 +257,7 @@
 
         <!-- Results. -->
         <div class="column">
-          <div class="content">
+          <div class="content has-text-centered has-text-justified">
             <h2 class="title is-3 has-text-centered">Geometric and Visual Reconstruction Results</h2>
 
             <!-- Visual mesh. -->
@@ -364,15 +372,17 @@
 
             <!-- Collision geometry. -->
             <div>
-              <p> Visualisation of the
-                <select id="mesh-selector"
-                  style="padding: 2px; background:#f0f0f0; border:none; font-family: &#39;Noto Sans&#39;, sans-serif; font-size:16px;">
-                  <option value="mustard" selected>Mustard Bottle</option>
-                  <option value="tomato_can">Tomato Soup Can</option>
-                  <option value="dumbell">Dumbell</option>
-                </select>
-                mesh and its corresponding collision geometry.
-              </p>
+              <div class="content has-text-centered">
+                <p> Visualisation of the
+                  <select id="mesh-selector"
+                    style="padding: 2px; background:#f0f0f0; border:none; font-family: &#39;Noto Sans&#39;, sans-serif; font-size:16px;">
+                    <option value="mustard" selected>Mustard Bottle</option>
+                    <option value="tomato_can">Tomato Soup Can</option>
+                    <option value="dumbell">Dumbell</option>
+                  </select>
+                  mesh and its corresponding collision geometry.
+                </p>
+              </div>
 
               <div class="columns is-centered">
                 <!-- Wheel -->
@@ -477,68 +487,59 @@
     <div class="container is-max-desktop">
       <!-- Experiments. -->
       <div class="columns is-centered has-text-centered">
-        <div class="column is-full-width">
+        <div class="column is-four-fifths">
           <h2 class="title is-3">Simulation Examples</h2>
-          <p>
-            Drake simulation recordings that demonstrate the simulatability of our assets.
-          </p>
-          <br>
-
-          <h2 class="title is-5">Recording Playback Instructions</h2>
-          <p>We recommend interacting with the simulation recordings:</p>
-          <p>
-            First, click the <i>Open Controls</i> button at the
-            top right corner to open the recording controls. Second, click the now visible <i>Scene</i> button to
-            collapse the unnecessary options. Third, click the <i>play</i> button to play the recording from the start.
-            The playback speed can be adjusted using the <i>timeScale</i> input. It is possible to move around the
-            simulation recording using mouse controls.
-          </p>
-          <br>
-
-          <div class="columns is-centered">
-            <div class="column">
-              <div class="content" center="">
-                <h2 class="title is-5 has-text-centered">Planar Pushing</h2>
-              </div>
-            </div>
+          <div class="content has-text-justified">
+            <p>
+              Drake simulation recordings that demonstrate the simulatability of our assets.
+            </p>
           </div>
-          <div class="columns is-centered">
-            <!-- Wheel -->
-            <div class="column">
+          <br>
+
+          <div class="content has-text-justified">
+            <h2 class="title is-5 has-text-centered">Recording Playback Instructions</h2>
+            <p>We recommend interacting with the simulation recordings:</p>
+            <p>
+              First, click the <i>Open Controls</i> button at the
+              top right corner to open the recording controls. Second, click the now visible <i>Scene</i> button to
+              collapse the unnecessary options. Third, click the <i>play</i> button to play the recording from the
+              start.
+              The playback speed can be adjusted using the <i>timeScale</i> input. It is possible to move around the
+              simulation recording using mouse controls.
+            </p>
+          </div>
+          <br>
+
+          <div id="simulation-carousel" class="carousel results-carousel">
+            <div class="results-item">
+              <h2 class="title is-5 has-text-centered">Planar Pushing - Mustard Bottle</h2>
               <div class="content is-centered">
                 <embed type="text/html" src="./static/meshcat/planar_pushing_mustard_bottle.html" height="360px"
-                  width="480px">
+                  width="100%">
               </div>
             </div>
-            <!-- Wheel -->
-            <div class="column">
+
+            <div class="results-item">
+              <h2 class="title is-5 has-text-centered">Planar Pushing - Tomato Soup Can</h2>
               <div class="content is-centered">
                 <embed type="text/html" src="./static/meshcat/planar_pushing_tomato_soup_can.html" height="360px"
-                  width="480px">
+                  width="100%">
               </div>
             </div>
-          </div>
 
-          <div class="columns is-centered">
-            <div class="column">
-              <div class="content" center="">
-                <h2 class="title is-5 has-text-centered">Actuated Ramp</h2>
-              </div>
-            </div>
-          </div>
-          <div class="columns is-centered">
-            <!-- Wheel -->
-            <div class="column">
+            <div class="results-item">
+              <h2 class="title is-5 has-text-centered">Actuated Ramp - Mustard Bottle</h2>
               <div class="content is-centered">
                 <embed type="text/html" src="./static/meshcat/actuated_ramp_mustard_bottle.html" height="360px"
-                  width="480px">
+                  width="100%">
               </div>
             </div>
-            <!-- Wheel -->
-            <div class="column">
+
+            <div class="results-item">
+              <h2 class="title is-5 has-text-centered">Actuated Ramp - Tomato Soup Can</h2>
               <div class="content is-centered">
                 <embed type="text/html" src="./static/meshcat/actuated_ramp_tomato_soup_can.html" height="360px"
-                  width="480px">
+                  width="100%">
               </div>
             </div>
           </div>
