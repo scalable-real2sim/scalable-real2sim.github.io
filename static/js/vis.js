@@ -30,11 +30,12 @@ $(function () {
                   <a href="https://bundlesdf.github.io/" target="_blank">BundleSDF</a> Visual Mesh
                 </h2>
                 <div class="content is-centered">
-                  <model-viewer"
-                    style="height: 480px; width: 480px;" alt="BundleSDF Visual Mesh"
-                    src="./static/models/${modelName}.glb" ar camera-controls auto-rotate
-                    rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                  </model-viewer>
+                    <model-viewer class="is-centered" style="height: 480px; width: 480px;" 
+                        alt="Raw Mesh" field-of-view="45"
+                        src="./static/models/${modelName}.glb" ar camera-controls 
+                        auto-rotate rotation-per-second="30deg" camera-orbit="auto auto 5%" 
+                        ar-status="not-presenting">
+                    </model-viewer>
                 </div>
               </div>
             </div>
@@ -46,11 +47,12 @@ $(function () {
                   Visual Mesh
                 </h2>
                 <div class="content is-centered">
-                  <model-viewer"
-                    style="height: 480px; width: 480px;" alt="Nerfacto Visual Mesh"
-                    src="./static/models/${modelName}_nerfstudio.glb" ar camera-controls auto-rotate
-                    rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                  </model-viewer>
+                    <model-viewer class="is-centered" style="height: 480px; width: 480px;" 
+                        alt="Raw Mesh" field-of-view="45"
+                        src="./static/models/${modelName}_nerfstudio.glb" ar camera-controls 
+                        auto-rotate rotation-per-second="30deg" camera-orbit="auto auto 5%" 
+                        ar-status="not-presenting">
+                    </model-viewer>
                 </div>
               </div>
             </div>
@@ -65,11 +67,12 @@ $(function () {
                   Visual Mesh
                 </h2>
                 <div class="content is-centered">
-                  <model-viewer"
-                    style="height: 480px; width: 480px;" alt="Neuralangelo Visual Mesh"
-                    src="./static/models/${modelName}_neuralangelo.glb" ar camera-controls auto-rotate
-                    rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                  </model-viewer>
+                    <model-viewer class="is-centered" style="height: 480px; width: 480px;" 
+                        alt="Raw Mesh" field-of-view="45"
+                        src="./static/models/${modelName}_nerualangelo.glb" ar camera-controls 
+                        auto-rotate rotation-per-second="30deg" camera-orbit="auto auto 5%" 
+                        ar-status="not-presenting">
+                    </model-viewer>
                 </div>
               </div>
             </div>
@@ -80,18 +83,19 @@ $(function () {
                   <a href="https://anttwo.github.io/frosting/" target="_blank">Gaussian Frosting</a> Visual Mesh
                 </h2>
                 <div class="content is-centered">
-                  <model-viewer"
-                    style="height: 480px; width: 480px;" alt="Gaussian Frosting Visual Mesh"
-                    src="./static/models/${modelName}_frosting.glb" ar camera-controls auto-rotate
-                    rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                  </model-viewer>
+                    <model-viewer class="is-centered" style="height: 480px; width: 480px;" 
+                        alt="Raw Mesh" field-of-view="45"
+                        src="./static/models/${modelName}_frosting.glb" ar camera-controls 
+                        auto-rotate rotation-per-second="30deg" camera-orbit="auto auto 5%" 
+                        ar-status="not-presenting">
+                    </model-viewer>
                 </div>
               </div>
             </div>
           </div>
         `;
     }
-
+    
     let defaultModel = "large_mustard"; // Set default model
     let defaultMesh = $('.mesh.' + defaultModel);
 
