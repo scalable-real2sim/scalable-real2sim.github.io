@@ -33,7 +33,7 @@ $(function () {
                   <model-viewer 
                     style="height: 480px; width: 480px;" alt="BundleSDF Visual Mesh"
                     src="./static/models/${modelName}.glb" ar camera-controls auto-rotate
-                    rotation-per-second="30deg" camera-orbit="auto auto 10%" ar-status="not-presenting">
+                    rotation-per-second="30deg" camera-orbit="auto auto 100%" ar-status="not-presenting">
                   </model-viewer>
                 </div>
               </div>
@@ -49,7 +49,7 @@ $(function () {
                   <model-viewer 
                     style="height: 480px; width: 480px;" alt="Nerfacto Visual Mesh"
                     src="./static/models/${modelName}_nerfstudio.glb" ar camera-controls auto-rotate
-                    rotation-per-second="30deg" camera-orbit="auto auto 10%" ar-status="not-presenting">
+                    rotation-per-second="30deg" camera-orbit="auto auto 100%" ar-status="not-presenting">
                   </model-viewer>
                 </div>
               </div>
@@ -68,7 +68,7 @@ $(function () {
                   <model-viewer 
                     style="height: 480px; width: 480px;" alt="Neuralangelo Visual Mesh"
                     src="./static/models/${modelName}_neuralangelo.glb" ar camera-controls auto-rotate
-                    rotation-per-second="30deg" camera-orbit="auto auto 10%" ar-status="not-presenting">
+                    rotation-per-second="30deg" camera-orbit="auto auto 100%" ar-status="not-presenting">
                   </model-viewer>
                 </div>
               </div>
@@ -83,7 +83,7 @@ $(function () {
                   <model-viewer 
                     style="height: 480px; width: 480px;" alt="Gaussian Frosting Visual Mesh"
                     src="./static/models/${modelName}_frosting.glb" ar camera-controls auto-rotate
-                    rotation-per-second="30deg" camera-orbit="auto auto 10%" ar-status="not-presenting">
+                    rotation-per-second="30deg" camera-orbit="auto auto 100%" ar-status="not-presenting">
                   </model-viewer>
                 </div>
               </div>
@@ -103,7 +103,7 @@ $(function () {
                     <model-viewer class="is-centered" style="height: 480px; width: 480px;" 
                         alt="Raw Mesh" field-of-view="45"
                         src="./static/models/${defaultModel}.glb" ar camera-controls 
-                        auto-rotate rotation-per-second="30deg" camera-orbit="auto auto 10%" 
+                        auto-rotate rotation-per-second="30deg" camera-orbit="auto auto 100%" 
                         ar-status="not-presenting">
                     </model-viewer>
                 </div>
@@ -113,7 +113,7 @@ $(function () {
                     <model-viewer class="is-centered" style="height: 480px; width: 480px;" 
                         alt="Collision Geometry" field-of-view="45"
                         src="./static/models/${defaultModel}_convex.glb" ar camera-controls 
-                        auto-rotate rotation-per-second="30deg" camera-orbit="auto auto 10%" 
+                        auto-rotate rotation-per-second="30deg" camera-orbit="auto auto 100%" 
                         ar-status="not-presenting">
                     </model-viewer>
                 </div>
@@ -135,7 +135,7 @@ $(function () {
                         <model-viewer class="is-centered" style="height: 480px; width: 480px;" 
                             alt="Raw Mesh" field-of-view="45"
                             src="./static/models/${selectedValue}.glb" ar camera-controls 
-                            auto-rotate rotation-per-second="30deg" camera-orbit="auto auto 10%" 
+                            auto-rotate rotation-per-second="30deg" camera-orbit="auto auto 100%" 
                             ar-status="not-presenting">
                         </model-viewer>
                     </div>
@@ -145,7 +145,7 @@ $(function () {
                         <model-viewer class="is-centered" style="height: 480px; width: 480px;" 
                             alt="Collision Geometry" field-of-view="45"
                             src="./static/models/${selectedValue}_convex.glb" ar camera-controls 
-                            auto-rotate rotation-per-second="30deg" camera-orbit="auto auto 10%" 
+                            auto-rotate rotation-per-second="30deg" camera-orbit="auto auto 100%" 
                             ar-status="not-presenting">
                         </model-viewer>
                     </div>
