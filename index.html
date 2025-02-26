@@ -410,123 +410,16 @@
               <p> Visualisation of the
                 <select id="visual-selector"
                   style="padding: 2px; background:#f0f0f0; border:none; font-family: &#39;Noto Sans&#39;, sans-serif; font-size:16px;">
-                  <option value="mustard" selected>Mustard Bottle</option>
-                  <option value="tomato_can">Tomato Soup Can</option>
-                  <option value="dumbell">Dumbell</option>
+                  <option value="inflator" selected>Inflator</option>
+                  <option value="large_mustard">Large Mustard Bottle</option>
+                  <option value="organic_mustard">Organic Honey Mustard</option>
                 </select>
                 visual mesh using a variety of photometric reconstruction methods.
               </p>
 
-              <!-- First row -->
-              <div class="columns is-centered">
-                <!-- BundleSDF column -->
-                <div class="column">
-                  <div class="content" center="">
-                    <h2 class="title is-5 has-text-centered"><a href="https://bundlesdf.github.io/"
-                        target="_blank">BundleSDF</a> Visual Mesh</h2>
-                    <div class="content is-centered">
-                      <!-- Mustard bottle (default) -->
-                      <model-viewer class="visual mustard" orientation="180deg 0deg 0deg"
-                        style="height: 480px; width: 480px;" alt="BundleSDF Visual Mesh"
-                        src="./static/models/mustard/gt_mustard_bottle.glb" ar camera-controls auto-rotate
-                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                      </model-viewer>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Nerfacto column -->
-                <div class="column">
-                  <div class="content" center="">
-                    <h2 class="title is-5 has-text-centered">
-                      <a href="https://docs.nerf.studio/nerfology/methods/nerfacto.html" target="_blank">Nerfacto</a>
-                      Visual Mesh
-                    </h2>
-                    <div class="content is-centered">
-                      <!-- Mustard bottle (default) -->
-                      <model-viewer class="visual mustard" orientation="180deg 0deg 0deg"
-                        style="height: 480px; width: 480px;" alt="Nerfacto Visual Mesh"
-                        src="./static/models/mustard/mustard_bottle.glb" ar camera-controls auto-rotate
-                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                      </model-viewer>
-                      <!-- Tomato can -->
-                      <model-viewer class="visual tomato_can" style="display: none; height: 360px; width: 480px;"
-                        orientation="180deg 0deg 0deg" alt="Nerfacto Visual Mesh"
-                        src="./static/models/tomato_soup_can/gt_tomato_soup_can.glb" ar camera-controls auto-rotate
-                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                      </model-viewer>
-                      <!-- Dumbell -->
-                      <model-viewer class="visual dumbell" style="display: none; height: 360px; width: 480px;"
-                        orientation="180deg 0deg 0deg" alt="Nerfacto Visual Mesh"
-                        src="./static/models/dumbell/dumbell.glb" ar camera-controls auto-rotate
-                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                      </model-viewer>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Second row -->
-              <div class="columns is-centered">
-                <!-- Neuralangelo column -->
-                <div class="column">
-                  <div class="content" center="">
-                    <h2 class="title is-5 has-text-centered">
-                      <a href="https://research.nvidia.com/labs/dir/neuralangelo/" target="_blank">Neuralangelo</a>
-                      Visual Mesh
-                    </h2>
-                    <div class="content is-centered">
-                      <!-- Mustard bottle (default) -->
-                      <model-viewer class="visual mustard" orientation="180deg 0deg 0deg"
-                        style="height: 480px; width: 480px;" alt="Neuralangelo Visual Mesh"
-                        src="./static/models/mustard/mustard_bottle.glb" ar camera-controls auto-rotate
-                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                      </model-viewer>
-                      <!-- Tomato can -->
-                      <model-viewer class="visual tomato_can" style="display: none; height: 360px; width: 480px;"
-                        orientation="180deg 0deg 0deg" alt="Neuralangelo Visual Mesh"
-                        src="./static/models/tomato_soup_can/gt_tomato_soup_can.glb" ar camera-controls auto-rotate
-                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                      </model-viewer>
-                      <!-- Dumbell -->
-                      <model-viewer class="visual dumbell" style="display: none; height: 360px; width: 480px;"
-                        orientation="180deg 0deg 0deg" alt="Neuralangelo Visual Mesh"
-                        src="./static/models/dumbell/dumbell.glb" ar camera-controls auto-rotate
-                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                      </model-viewer>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Gaussian Frosting column -->
-                <div class="column">
-                  <div class="content" center="">
-                    <h2 class="title is-5 has-text-centered">
-                      <a href="https://anttwo.github.io/frosting/" target="_blank">Gaussian Frosting</a> Visual Mesh
-                    </h2>
-                    <div class="content is-centered">
-                      <!-- Mustard bottle (default) -->
-                      <model-viewer class="visual mustard" orientation="180deg 0deg 0deg"
-                        style="height: 480px; width: 480px;" alt="Gaussian Frosting Visual Mesh"
-                        src="./static/models/mustard/mustard_bottle.glb" ar camera-controls auto-rotate
-                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                      </model-viewer>
-                      <!-- Tomato can -->
-                      <model-viewer class="visual tomato_can" style="display: none; height: 360px; width: 480px;"
-                        orientation="180deg 0deg 0deg" alt="Gaussian Frosting Visual Mesh"
-                        src="./static/models/tomato_soup_can/gt_tomato_soup_can.glb" ar camera-controls auto-rotate
-                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                      </model-viewer>
-                      <!-- Dumbell -->
-                      <model-viewer class="visual dumbell" style="display: none; height: 360px; width: 480px;"
-                        orientation="180deg 0deg 0deg" alt="Gaussian Frosting Visual Mesh"
-                        src="./static/models/dumbell/dumbell.glb" ar camera-controls auto-rotate
-                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                      </model-viewer>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="visual inflator" style="display: none;"></div>
+              <div class="visual large_mustard" style="display: none;"></div>
+              <div class="visual organic_mustard" style="display: none;"></div>
             </div>
             <!--/ Visual mesh. -->
 

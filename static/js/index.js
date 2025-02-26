@@ -68,7 +68,7 @@ function loadCurrentSlide(currentIndex) {
     // Remove the loading placeholder after a delay
     setTimeout(function() {
       $currentSlide.find('.loading-placeholder').fadeOut();
-    }, 100);
+    }, 500);
   }
 }
 
