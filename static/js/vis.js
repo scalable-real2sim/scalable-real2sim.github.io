@@ -1,111 +1,44 @@
 $(function () {
     let defaultVisualModel = "large_mustard"; // Set default model
-    let defaultVisualMesh = $('.visual.' + defaultModel);
+    let defaultVisualMesh = $('.visual.' + defaultVisualModel);
 
     // Load the default model into the div
-    defaultVisualMesh.html(`
-      <!-- First row -->
-      <div class="columns is-centered">
-        <!-- BundleSDF column -->
-        <div class="column">
-          <div class="content" center="">
-            <h2 class="title is-5 has-text-centered"><a href="https://bundlesdf.github.io/"
-                target="_blank">BundleSDF</a> Visual Mesh</h2>
-            <div class="content is-centered">
-              <!-- Mustard bottle (default) -->
-              <model-viewer orientation="180deg 0deg 0deg"
-                style="height: 480px; width: 480px;" alt="BundleSDF Visual Mesh"
-                src="./static/models/${defaultVisualModel}.glb" ar camera-controls auto-rotate
-                rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-              </model-viewer>
-            </div>
-          </div>
-        </div>
+    defaultVisualMesh.html(generateModelHTML(defaultVisualModel));
+    defaultVisualMesh.show();
 
-        <!-- Nerfacto column -->
-        <div class="column">
-          <div class="content" center="">
-            <h2 class="title is-5 has-text-centered">
-              <a href="https://docs.nerf.studio/nerfology/methods/nerfacto.html" target="_blank">Nerfacto</a>
-              Visual Mesh
-            </h2>
-            <div class="content is-centered">
-              <!-- Mustard bottle (default) -->
-              <model-viewer orientation="180deg 0deg 0deg"
-                style="height: 480px; width: 480px;" alt="Nerfacto Visual Mesh"
-                src="./static/models/${defaultVisualModel}_nerfstudio.glb" ar camera-controls auto-rotate
-                rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-              </model-viewer>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Second row -->
-      <div class="columns is-centered">
-        <!-- Neuralangelo column -->
-        <div class="column">
-          <div class="content" center="">
-            <h2 class="title is-5 has-text-centered">
-              <a href="https://research.nvidia.com/labs/dir/neuralangelo/" target="_blank">Neuralangelo</a>
-              Visual Mesh
-            </h2>
-            <div class="content is-centered">
-              <!-- Mustard bottle (default) -->
-              <model-viewer orientation="180deg 0deg 0deg"
-                style="height: 480px; width: 480px;" alt="Neuralangelo Visual Mesh"
-                src="./static/models/${defaultVisualModel}_neuralangelo.glb" ar camera-controls auto-rotate
-                rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-              </model-viewer>
-            </div>
-          </div>
-        </div>
-
-        <!-- Gaussian Frosting column -->
-        <div class="column">
-          <div class="content" center="">
-            <h2 class="title is-5 has-text-centered">
-              <a href="https://anttwo.github.io/frosting/" target="_blank">Gaussian Frosting</a> Visual Mesh
-            </h2>
-            <div class="content is-centered">
-              <!-- Mustard bottle (default) -->
-              <model-viewer orientation="180deg 0deg 0deg"
-                style="height: 480px; width: 480px;" alt="Gaussian Frosting Visual Mesh"
-                src="./static/models/${defaultVisualModel}_frosting.glb" ar camera-controls auto-rotate
-                rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-              </model-viewer>
-            </div>
-          </div>
-        </div>
-      </div>
-    `);
     $('#visual-selector').change(function () {
         let selectedValue = $(this).val(); // Get the selected model
         let selectedMesh = $('.visual.' + selectedValue);
 
-        // Hide all mesh divs and remove existing content
-        $('.visual').hide().empty();
+        // Hide all mesh divs
+        $('.visual').hide();
 
         // Insert model-viewer elements dynamically only for the selected mesh
-        selectedMesh.html(`
+        selectedMesh.html(generateModelHTML(selectedValue));
+
+        // Show the selected mesh
+        selectedMesh.show();
+    });
+
+    function generateModelHTML(modelName) {
+        return `
           <!-- First row -->
           <div class="columns is-centered">
-            <!-- BundleSDF column -->
             <div class="column">
               <div class="content" center="">
-                <h2 class="title is-5 has-text-centered"><a href="https://bundlesdf.github.io/"
-                    target="_blank">BundleSDF</a> Visual Mesh</h2>
+                <h2 class="title is-5 has-text-centered">
+                  <a href="https://bundlesdf.github.io/" target="_blank">BundleSDF</a> Visual Mesh
+                </h2>
                 <div class="content is-centered">
                   <model-viewer orientation="180deg 0deg 0deg"
                     style="height: 480px; width: 480px;" alt="BundleSDF Visual Mesh"
-                    src="./static/models/${selectedMesh}.glb" ar camera-controls auto-rotate
+                    src="./static/models/${modelName}.glb" ar camera-controls auto-rotate
                     rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                   </model-viewer>
                 </div>
               </div>
             </div>
 
-            <!-- Nerfacto column -->
             <div class="column">
               <div class="content" center="">
                 <h2 class="title is-5 has-text-centered">
@@ -115,7 +48,7 @@ $(function () {
                 <div class="content is-centered">
                   <model-viewer orientation="180deg 0deg 0deg"
                     style="height: 480px; width: 480px;" alt="Nerfacto Visual Mesh"
-                    src="./static/models/${selectedMesh}_nerfstudio.glb" ar camera-controls auto-rotate
+                    src="./static/models/${modelName}_nerfstudio.glb" ar camera-controls auto-rotate
                     rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                   </model-viewer>
                 </div>
@@ -125,7 +58,6 @@ $(function () {
 
           <!-- Second row -->
           <div class="columns is-centered">
-            <!-- Neuralangelo column -->
             <div class="column">
               <div class="content" center="">
                 <h2 class="title is-5 has-text-centered">
@@ -135,14 +67,13 @@ $(function () {
                 <div class="content is-centered">
                   <model-viewer orientation="180deg 0deg 0deg"
                     style="height: 480px; width: 480px;" alt="Neuralangelo Visual Mesh"
-                    src="./static/models/${selectedMesh}_neuralangelo.glb" ar camera-controls auto-rotate
+                    src="./static/models/${modelName}_neuralangelo.glb" ar camera-controls auto-rotate
                     rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                   </model-viewer>
                 </div>
               </div>
             </div>
 
-            <!-- Gaussian Frosting column -->
             <div class="column">
               <div class="content" center="">
                 <h2 class="title is-5 has-text-centered">
@@ -151,18 +82,15 @@ $(function () {
                 <div class="content is-centered">
                   <model-viewer orientation="180deg 0deg 0deg"
                     style="height: 480px; width: 480px;" alt="Gaussian Frosting Visual Mesh"
-                    src="./static/models/${selectedMesh}_frosting.glb" ar camera-controls auto-rotate
+                    src="./static/models/${modelName}_frosting.glb" ar camera-controls auto-rotate
                     rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                   </model-viewer>
                 </div>
               </div>
             </div>
           </div>
-        `);
-
-        // Show the selected mesh
-        selectedMesh.show();
-    });
+        `;
+    }
     
     let defaultModel = "large_mustard"; // Set default model
     let defaultMesh = $('.mesh.' + defaultModel);
