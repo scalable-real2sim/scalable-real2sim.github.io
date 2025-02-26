@@ -205,7 +205,7 @@
       <div class="columns is-centered has-text-centered">
         <div class="column">
           <h2 class="title is-3">System Overview</h2>
-          <img src="./static/images/system_diagram.jpg">
+          <img src="./static/images/system_diagram_linear_2bright.png">
           <div class="content has-text-justified">
             <p>
               Our pipeline integrates seamlessly into a standard pick-and-place setup with two bins and a robotic arm.
@@ -279,6 +279,539 @@
           <div class="content has-text-centered">
             <h2 class="title is-3 has-text-centered">Visual and Collision Geometry Examples</h2>
 
+            <!-- Collision geometry. -->
+            <div>
+              <div class="content has-text-centered">
+                <p> Visualisation of the
+                  <select id="mesh-selector"
+                    style="padding: 2px; background:#f0f0f0; border:none; font-family: &#39;Noto Sans&#39;, sans-serif; font-size:16px;">
+                    <option value="bleach">Bleach Bottle</option>
+                    <option value="camera_mount">Camera Mount</option>
+                    <option value="cherry_jello">Cherry Jello</option>
+                    <option value="expo_brush">Expo Brush</option>
+                    <option value="finray">Large Finray</option>
+                    <option value="inflator">Inflator</option>
+                    <option value="ketchup">Ketchup Bottle</option>
+                    <option value="large_mustard" selected>Large Mustard Bottle</option>
+                    <option value="leaf_bags">Leaf Bags Box</option>
+                    <option value="lego">Lego</option>
+                    <option value="lime_jello">Lime Jello</option>
+                    <option value="mouthwash">Mouthwash</option>
+                    <option value="organic_mustard">Organic Honey Mustard</option>
+                    <option value="pollinator">Pollinator Box</option>
+                    <option value="skittles">Skittles</option>
+                    <option value="small_mustard">Small Mustard Bottle</option>
+                    <option value="spam">Potted Meat Can</option>
+                    <option value="sugar_box">Sugar Box</option>
+                    <option value="tide">Tide Bottle</option>
+                    <option value="unitek">Unitek Box</option>
+                  </select>
+                  <a href="https://bundlesdf.github.io/" target="_blank">BundleSDF</a> mesh and its corresponding <a
+                    href="https://github.com/kmammou/v-hacd" target="_blank">V-HACD</a> collision geometry.
+                </p>
+              </div>
+
+              <div class="columns is-centered">
+                <!-- Wheel -->
+                <div class="column">
+                  <div class="content" center="">
+                    <h2 class="title is-5 has-text-centered">Visual Mesh</h2>
+                  </div>
+                </div>
+
+                <!-- Wheel -->
+                <div class="column">
+                  <div class="content" center="">
+                    <h2 class="title is-5 has-text-centered">Collision Geometry</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh bleach" style="display: none;">
+                <div class="columns is-centered">
+                  <!-- Raw Mesh -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/bleach.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Collision Geometry -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/bleach_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh camera_mount" style="display: none;">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/camera_mount.glb" ar camera-controls
+                        auto-rotate rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/camera_mount_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh cherry_jello" style="display: none;">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/cherry_jello.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/cherry_jello_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh expo_brush" style="display: none;">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/expo_brush.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/expo_brush_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh finray" style="display: none;">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/expo_brush.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/expo_brush_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh inflator" style="display: none;">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/inflator.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/inflator_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh ketchup" style="display: none;">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/ketchup.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/ketchup_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh large_mustard">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/mustard_large_bundlesdf.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/mustard_large_bundlesdf_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh leaf_bags" style="display: none;">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/leaf_bags.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/leaf_bags_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh lego" style="display: none;">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/lego.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/lego_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh lime_jello" style="display: none;">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/lime_jello.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/lime_jello_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh mouthwash" style="display: none;">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/mouthwash.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/mouthwash_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh organic_mustard">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/organic_mustard.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/organic_mustard_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh pollinator">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/pollinator.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/pollinator_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh skittles">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/skittles.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/skittles_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh small_mustard">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/small_mustard.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/small_mustard_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh spam">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/spam.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/spam_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh sugar_box">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/sugar_box.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/sugar_box_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh tide">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/tide.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/tide_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mesh unitek">
+                <div class="columns is-centered">
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
+                        src="./static/models/unitek.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+
+                  <!-- Wheel -->
+                  <div class="column">
+                    <div class="content is-centered">
+                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
+                        src="./static/models/unitek_convex.glb" ar camera-controls auto-rotate
+                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      </model-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!--/ Collision geometry. -->
+
+            <br>
+            
             <!-- Visual mesh. -->
             <div>
               <p> Visualisation of the
@@ -288,7 +821,7 @@
                   <option value="tomato_can">Tomato Soup Can</option>
                   <option value="dumbell">Dumbell</option>
                 </select>
-                visual mesh.
+                visual mesh using a variety of photometric reconstruction methods.
               </p>
 
               <!-- First row -->
@@ -303,18 +836,6 @@
                       <model-viewer class="visual mustard" orientation="180deg 0deg 0deg"
                         style="height: 360px; width: 480px;" alt="BundleSDF Visual Mesh"
                         src="./static/models/mustard/gt_mustard_bottle.glb" ar camera-controls auto-rotate
-                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                      </model-viewer>
-                      <!-- Tomato can -->
-                      <model-viewer class="visual tomato_can" style="display: none; height: 360px; width: 480px;"
-                        orientation="180deg 0deg 0deg" alt="BundleSDF Visual Mesh"
-                        src="./static/models/tomato_soup_can/gt_tomato_soup_can.glb" ar camera-controls auto-rotate
-                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                      </model-viewer>
-                      <!-- Dumbell -->
-                      <model-viewer class="visual dumbell" style="display: none; height: 360px; width: 480px;"
-                        orientation="180deg 0deg 0deg" alt="BundleSDF Visual Mesh"
-                        src="./static/models/dumbell/dumbell.glb" ar camera-controls auto-rotate
                         rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
@@ -416,114 +937,6 @@
             </div>
             <!--/ Visual mesh. -->
 
-            <br>
-
-            <!-- Collision geometry. -->
-            <div>
-              <div class="content has-text-centered">
-                <p> Visualisation of the
-                  <select id="mesh-selector"
-                    style="padding: 2px; background:#f0f0f0; border:none; font-family: &#39;Noto Sans&#39;, sans-serif; font-size:16px;">
-                    <option value="mustard" selected>Mustard Bottle</option>
-                    <option value="tomato_can">Tomato Soup Can</option>
-                    <option value="dumbell">Dumbell</option>
-                  </select>
-                  <a href="https://bundlesdf.github.io/" target="_blank">BundleSDF</a> mesh and its corresponding <a
-                    href="https://github.com/kmammou/v-hacd" target="_blank">V-HACD</a> collision geometry.
-                </p>
-              </div>
-
-              <div class="columns is-centered">
-                <!-- Wheel -->
-                <div class="column">
-                  <div class="content" center="">
-                    <h2 class="title is-5 has-text-centered">Raw Mesh</h2>
-                  </div>
-                </div>
-
-                <!-- Wheel -->
-                <div class="column">
-                  <div class="content" center="">
-                    <h2 class="title is-5 has-text-centered">Collision Geometry</h2>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mesh mustard">
-                <div class="columns is-centered">
-                  <!-- Raw Mesh -->
-                  <div class="column">
-                    <div class="content is-centered">
-                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
-                        src="./static/models/mustard/mustard_bottle_no_texture.glb" ar camera-controls auto-rotate
-                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                      </model-viewer>
-                    </div>
-                  </div>
-
-                  <!-- Collision Geometry -->
-                  <div class="column">
-                    <div class="content is-centered">
-                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
-                        src="./static/models/mustard/coacd.glb" ar camera-controls auto-rotate
-                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                      </model-viewer>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mesh tomato_can" style="display: none;">
-                <div class="columns is-centered">
-                  <!-- Wheel -->
-                  <div class="column">
-                    <div class="content is-centered">
-                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
-                        src="./static/models/tomato_soup_can/tomato_soup_can_no_texture.glb" ar camera-controls
-                        auto-rotate rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                      </model-viewer>
-                    </div>
-                  </div>
-
-                  <!-- Wheel -->
-                  <div class="column">
-                    <div class="content is-centered">
-                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
-                        src="./static/models/tomato_soup_can/coacd.glb" ar camera-controls auto-rotate
-                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                      </model-viewer>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mesh dumbell" style="display: none;">
-                <div class="columns is-centered">
-                  <!-- Wheel -->
-                  <div class="column">
-                    <div class="content is-centered">
-                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Raw Mesh"
-                        src="./static/models/dumbell/dumbell_no_texture.glb" ar camera-controls auto-rotate
-                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                      </model-viewer>
-                    </div>
-                  </div>
-
-                  <!-- Wheel -->
-                  <div class="column">
-                    <div class="content is-centered">
-                      <model-viewer class="is-centered" style="height: 360px; width: 480px;" alt="Collision Geometry"
-                        src="./static/models/dumbell/coacd.glb" ar camera-controls auto-rotate
-                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
-                      </model-viewer>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <!--/ Collision geometry. -->
-
           </div>
         </div>
         <!--/ Results. -->
@@ -560,9 +973,9 @@
 
           <div id="simulation-carousel" class="carousel results-carousel">
             <div class="results-item">
-              <h2 class="title is-5 has-text-centered">Planar Pushing - Mustard Bottle</h2>
+              <h2 class="title is-5 has-text-centered">Pushing - Inflator</h2>
               <div class="content is-centered">
-                <embed type="text/html" src="./static/meshcat/planar_pushing_mustard_bottle.html" height="100%"
+                <embed type="text/html" src="./static/meshcat/inflator_pushing.html" height="100%"
                   style="width: 100%; aspect-ratio: 1.5;">
               </div>
             </div>
