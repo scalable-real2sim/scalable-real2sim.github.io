@@ -405,20 +405,21 @@
 
             <br>
             
+            <h2 class="title is-3 has-text-centered">Object-Centric Visual Reconstructions</h2>
             <!-- Visual mesh. -->
             <div>
               <p> Visualisation of the
                 <select id="visual-selector"
                   style="padding: 2px; background:#f0f0f0; border:none; font-family: &#39;Noto Sans&#39;, sans-serif; font-size:16px;">
-                  <option value="inflator">Inflator</option>
-                  <option value="large_mustard" selected>Large Mustard Bottle</option>
+                  <option value="inflator" selected>Inflator</option>
+                  <option value="large_mustard">Large Mustard Bottle</option>
                   <option value="organic_mustard">Organic Honey Mustard</option>
                 </select>
                 visual mesh using a variety of photometric reconstruction methods.
               </p>
 
-              <div class="visual inflator" style="display: none;"></div>
-              <div class="visual large_mustard" style="display: block;"></div>
+              <div class="visual inflator" style="display: block;"></div>
+              <div class="visual large_mustard" style="display: none;"></div>
               <div class="visual organic_mustard" style="display: none;"></div>
             </div>
             <!--/ Visual mesh. -->
@@ -453,6 +454,7 @@
               start.
               The playback speed can be adjusted using the <i>timeScale</i> input. It is possible to move around the
               simulation recording using mouse controls.
+              If you see "No connection", wait a few seconds for the simulation to finish loading.
             </p>
           </div>
           <br>
