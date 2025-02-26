@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Scalable Real2Sim Asset Generation Via Robotic Pick-and-Place Setups">
+  <meta name="description" content="Scalable Real2Sim: Physics-Aware Asset Generation Via Robotic Pick-and-Place Setups">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Scalable Real2Sim Asset Generation Via Robotic Pick-and-Place Setups</title>
+  <title>Scalable Real2Sim: Physics-Aware Asset Generation Via Robotic Pick-and-Place Setups</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -101,7 +101,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">
-              Scalable Real2Sim Asset Generation<br>Via Robotic Pick-and-Place Setups
+              Scalable Real2Sim:<br>Physics-Aware Asset Generation<br>Via Robotic Pick-and-Place Setups
             </h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
@@ -109,6 +109,10 @@
               </span>
               <span class="author-block">
                 Evelyn Fu,</span>&nbsp;&nbsp;
+              <span class="author-block">
+                Jeremy Binagia,</span>&nbsp;&nbsp;
+              <span class="author-block">
+                Phillip Isola,</span>&nbsp;&nbsp;
               <span class="author-block">
                 <a href="https://locomotion.csail.mit.edu/russt.html" class="author-link">Russ Tedrake</a>
               </span>
@@ -179,16 +183,23 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Accurately simulating object dynamics from real-world perception inputs is essential for applications in
-              digital twins and robotic manipulation but typically requires labor-intensive measurements and domain
-              expertise. We present a fully automated Real2Sim pipeline that generates simulation-ready assets for
-              real-world objects through robotic interaction. Using only a robot's joint torque sensors and an external
-              camera, the pipeline identifies visual geometry, collision geometry, and physical properties such as
-              inertial parameters. Our approach introduces a general method for extracting high-quality, object-centric
-              meshes from photometric reconstruction techniques (e.g., NeRF, Gaussian Splatting) and demonstrates its
-              effectiveness through extensive experimental validation. By eliminating the need for manual intervention
-              or environment modifications, the pipeline integrates seamlessly into existing pick-and-place setups,
-              enabling scalable and efficient dataset creation.
+              Accurately simulating object dynamics from real-
+              world perception inputs shows great promise for applications
+              in digital twins and robotic manipulation but typically re-
+              quires labor-intensive measurements and domain expertise. We
+              present a fully automated Real2Sim pipeline that generates
+              simulation-ready assets for real-world objects through robotic
+              interaction. Using only a robot's joint torque sensors and an
+              external camera, the pipeline identifies visual geometry, collision
+              geometry, and physical properties such as inertial parameters.
+              Our approach introduces a general method for extracting high-
+              quality, object-centric meshes from photometric reconstruction
+              techniques (e.g., NeRF, Gaussian Splatting). We validate the
+              full pipeline through extensive experiments, demonstrating its
+              effectiveness across diverse objects. By eliminating the need for
+              manual intervention or environment modifications, the pipeline
+              seamlessly integrates into existing pick-and-place setups, en-
+              abling scalable and efficient dataset creation.
             </p>
           </div>
         </div>
@@ -527,7 +538,7 @@
     </div>
   </section>
 
-  <!-- <section class="section">
+  <section class="section">
     <div class="container is-max-widescreen">
       <div class="columns is-centered">
         <div class="column is-10">
@@ -561,6 +572,26 @@
                   style="width: 100%; aspect-ratio: 1.5;">
               </div>
             </div>
+          
+            <div class="results-item">
+              <h2 class="title is-5 has-text-centered">Planar Pushing - Tomato Soup Can</h2>
+              <div class="content is-centered">
+                <embed type="text/html" src="./static/meshcat/planar_pushing_tomato_soup_can.html" height="100%"
+                  style="width: 100%; aspect-ratio: 1.5;">
+              </div>
+            </div>
+          
+            <!-- And so on for your other slides -->
+          </div>
+          
+          <!-- <div id="simulation-carousel" class="carousel results-carousel">
+            <div class="results-item">
+              <h2 class="title is-5 has-text-centered">Pushing - Inflator</h2>
+              <div class="content is-centered">
+                <embed type="text/html" src="./static/meshcat/inflator_pushing.html" height="100%"
+                  style="width: 100%; aspect-ratio: 1.5;">
+              </div>
+            </div>
 
             <div class="results-item">
               <h2 class="title is-5 has-text-centered">Planar Pushing - Tomato Soup Can</h2>
@@ -585,11 +616,11 @@
                   style="width: 100%; aspect-ratio: 1.5;">
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
 
   <section class="section" id="BibTeX">
