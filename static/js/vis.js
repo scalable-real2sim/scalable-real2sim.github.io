@@ -1,5 +1,5 @@
 $(function () {
-    let defaultVisualModel = "large_mustard"; // Set default model
+    let defaultVisualModel = "inflator"; // Set default model
     let defaultVisualMesh = $('.visual.' + defaultVisualModel);
 
     // Load the default model into the div
