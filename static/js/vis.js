@@ -42,13 +42,13 @@ $(function () {
             <div class="column">
               <div class="content" center="">
                 <h2 class="title is-5 has-text-centered">
-                  <a href="https://docs.nerf.studio/nerfology/methods/nerfacto.html" target="_blank">Nerfacto</a>
+                  <a href="https://research.nvidia.com/labs/dir/neuralangelo/" target="_blank">Neuralangelo</a>
                   Visual Mesh
                 </h2>
                 <div class="content is-centered">
                   <model-viewer 
-                    style="height: 480px; width: 480px;" alt="Nerfacto Visual Mesh"
-                    src="./static/models/${modelName}_nerfstudio.glb" ar camera-controls auto-rotate
+                    style="height: 480px; width: 480px;" alt="Neuralangelo Visual Mesh"
+                    src="./static/models/${modelName}_neuralangelo.glb" ar camera-controls auto-rotate
                     rotation-per-second="30deg" camera-orbit="auto auto 100%" ar-status="not-presenting">
                   </model-viewer>
                 </div>
@@ -61,13 +61,13 @@ $(function () {
             <div class="column">
               <div class="content" center="">
                 <h2 class="title is-5 has-text-centered">
-                  <a href="https://research.nvidia.com/labs/dir/neuralangelo/" target="_blank">Neuralangelo</a>
+                  <a href="https://docs.nerf.studio/nerfology/methods/nerfacto.html" target="_blank">Nerfacto</a>
                   Visual Mesh
                 </h2>
                 <div class="content is-centered">
                   <model-viewer 
-                    style="height: 480px; width: 480px;" alt="Neuralangelo Visual Mesh"
-                    src="./static/models/${modelName}_neuralangelo.glb" ar camera-controls auto-rotate
+                    style="height: 480px; width: 480px;" alt="Nerfacto Visual Mesh"
+                    src="./static/models/${modelName}_nerfstudio.glb" ar camera-controls auto-rotate
                     rotation-per-second="30deg" camera-orbit="auto auto 100%" ar-status="not-presenting">
                   </model-viewer>
                 </div>
