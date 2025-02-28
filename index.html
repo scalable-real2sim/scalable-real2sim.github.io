@@ -178,6 +178,18 @@
 
   <section class="section">
     <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Teaser gif</h2>
+          <p>Coming Soon</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
@@ -215,19 +227,14 @@
           <img src="./static/images/system_diagram_linear_2bright.png">
           <div class="content has-text-justified">
             <p>
-              Our pipeline integrates seamlessly into a standard pick-and-place setup with two bins and a robotic arm.
-              The robot picks an object from the first bin, interacts with it to gather data for asset creation, and
-              places it in the second bin. This process runs fully autonomously until the first bin is empty.
-              The robot begins by moving the object in front of a static RGBD camera, ensuring full observability
-              through re-grasps as needed. Background pixels are masked using video segmentation, and object tracking
-              determines the object poses in the camera frame. These poses, along with image data, are input to a 3D
-              reconstruction method. We propose a general recipe for obtaining object-centric triangle meshes from
-              arbitrary photometric reconstruction methods, such as NeRF or Gaussian Splatting, by adapting them to
-              dynamic, object-centric scenarios. The collision geometry
-              is then derived from the visual geometry via convex decomposition, simplifying and convexifying the shape
-              for simulation purposes. Lastly, the robot executes an optimal excitation trajectory to collect joint
-              position and torque data, enabling identification of the object's physical properties through convex
-              optimization.
+              Objects are placed in the first bin, where the robot picks them up and
+              reconstructs their geometries by moving them in front of a static camera
+              while re-grasping to reduce occlusions. Next, the robot identifies the
+              object's physical parameters by following a trajectory designed to be
+              informative for the inertial parameters. Finally, it places the object
+              into the second bin and repeats the process with the next object. The
+              extracted geometric and physical parameters are combined to generate a
+              complete, simulatable object description.
             </p>
           </div>
         </div>
@@ -242,9 +249,8 @@
     <!-- Project Video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Project Video</h2>
-        <p>The following video shows a single pipeline iteration.</p>
-        <!-- <p>The video has been sped up by a factor of 20.</p> -->
+        <h2 class="title is-3">Overview Video</h2>
+        <p>Coming Soon</p>
         <br>
         <div class="content has-text-centered">
           <!-- <video id="replay-video" controls muted preload playsinline width="75%">
@@ -258,22 +264,163 @@
   </section>
 
   <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Full Pipeline Video. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-3">Full Pipeline Video</h2>
-          <br>
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <h2 class="title is-3 has-text-centered">Sim vs Real Experiments</h2>
           <div class="content has-text-centered">
-            <iframe style="aspect-ratio: 16 / 9; width: 100%;"
-              src="https://www.youtube.com/embed/UC1dN6VAfx8">
-            </iframe>
+            <p>
+              Examples of interactions with our reconstructed assets in simulation and the original objects in the real world.
+              <br>
+              "Default Physics" refers to using our identified mass but not specifying a center of mass and rotational
+              inertia, resulting in the simulator using the default values for these parameters.
+            </p>
+          </div>
+          <br>
+          <br>
+          
+          <h3 class="title is-5 has-text-centered">PUSHING OVER</h3>
+          <div class="columns is-centered">
+            <!-- Wheel -->
+            <div class="column">
+              <div class="content is-centered">
+                <p class="has-text-centered"><b>INFLATOR</b></p>
+                <img src="./static/gifs/inflator_sim_real.gif">
+              </div>
+            </div>
+
+            <!-- Wheel -->
+            <div class="column">
+              <div class="content is-centered">
+                <p class="has-text-centered"><b>SPAM CAN</b></p>
+                <img src="./static/gifs/spam_sim_real.gif">
+              </div>
+            </div>
+          </div>
+          
+          <h3 class="title is-5 has-text-centered">PICK AND PLACE</h3>
+          <div class="columns is-centered">
+            <!-- Wheel -->
+            <div class="column">
+              <div class="content is-centered">
+                <p class="has-text-centered"><b>CAMERA MOUNT</b></p>
+                <img src="./static/gifs/camera_mount_real_sim.gif">
+              </div>
+            </div>
+
+            <!-- Wheel -->
+            <div class="column">
+              <div class="content is-centered">
+                <p class="has-text-centered"><b>UNITEK BOX</b></p>
+                <img src="./static/gifs/unitek_real_sim.gif">
+              </div>
+            </div>
+          </div>
+          
+          <h3 class="title is-5 has-text-centered">RAMP</h3>
+          <div class="columns is-centered">
+            <!-- Wheel -->
+            <div class="column">
+              <div class="content is-centered">
+                <p class="has-text-centered"><b>SUGAR BOX</b></p>
+                <img src="./static/gifs/sugar_box_sim_real.gif">
+              </div>
+            </div>
+
+            <!-- Wheel -->
+            <div class="column">
+              <div class="content is-centered">
+                <p class="has-text-centered"><b>MOUTHWASH</b></p>
+                <img src="./static/gifs/mouthwash_sim_real.gif">
+              </div>
+            </div>
           </div>
 
-          <p>Find the full, non sped-up version <a href="https://youtu.be/bBPMNGk7edg">here</a></p>
         </div>
       </div>
-      <!--/ Full Pipeline Video. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <h2 class="title is-3 has-text-centered">Simulation Examples</h2>
+          <div class="content has-text-centered">
+            <p>
+              Drake simulation recordings that demonstrate the simulatability of our assets.
+            </p>
+          </div>
+          <br>
+
+          <div class="content has-text-justified">
+            <h2 class="title is-5 has-text-centered">Recording Playback Instructions</h2>
+            <p class="has-text-centered">We recommend interacting with the simulation recordings:</p>
+            <p class="has-text-justified">
+              First, click the <i>Open Controls</i> button at the
+              top right corner to open the recording controls. Second, click the now visible <i>Scene</i> button to
+              collapse the unnecessary options. Third, click the <i>play</i> button to play the recording from the
+              start.
+              The playback speed can be adjusted using the <i>timeScale</i> input. It is possible to move around the
+              simulation recording using mouse controls.
+              If you see "No connection", wait a few seconds for the simulation to finish loading.
+            </p>
+          </div>
+          <br>
+
+          <div id="simulation-carousel" class="carousel results-carousel">
+            <div class="results-item">
+              <h2 class="title is-5 has-text-centered">Pushing - Inflator</h2>
+              <div class="content is-centered">
+                <embed type="text/html" src="./static/meshcat/inflator_push.html" height="100%"
+                  style="width: 100%; aspect-ratio: 1.5;">
+              </div>
+            </div>
+          
+            <div class="results-item">
+              <h2 class="title is-5 has-text-centered">Pushing - Spam</h2>
+              <div class="content is-centered">
+                <embed type="text/html" src="./static/meshcat/spam_push.html" height="100%"
+                  style="width: 100%; aspect-ratio: 1.5;">
+              </div>
+            </div>
+          
+            <div class="results-item">
+              <h2 class="title is-5 has-text-centered">Picking - Camera Mount</h2>
+              <div class="content is-centered">
+                <embed type="text/html" src="./static/meshcat/camera_mount_pick.html" height="100%"
+                  style="width: 100%; aspect-ratio: 1.5;">
+              </div>
+            </div>
+          
+            <div class="results-item">
+              <h2 class="title is-5 has-text-centered">Picking - Unitek</h2>
+              <div class="content is-centered">
+                <embed type="text/html" src="./static/meshcat/unitek_pick.html" height="100%"
+                  style="width: 100%; aspect-ratio: 1.5;">
+              </div>
+            </div>
+          
+            <div class="results-item">
+              <h2 class="title is-5 has-text-centered">Ramp - Mouthwash</h2>
+              <div class="content is-centered">
+                <embed type="text/html" src="./static/meshcat/mouth_wash_ramp.html" height="100%"
+                  style="width: 100%; aspect-ratio: 1.5;">
+              </div>
+            </div>
+          
+            <div class="results-item">
+              <h2 class="title is-5 has-text-centered">Ramp - Sugar Box</h2>
+              <div class="content is-centered">
+                <embed type="text/html" src="./static/meshcat/sugar_box_ramp.html" height="100%"
+                  style="width: 100%; aspect-ratio: 1.5;">
+              </div>
+            </div>
+          
+            <!-- And so on for your other slides -->
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -430,162 +577,28 @@
   </section>
 
   <section class="section">
-    <div class="container is-max-widescreen">
-      <div class="columns is-centered">
-        <div class="column is-10">
-          <h2 class="title is-3 has-text-centered">Simulation Examples</h2>
+    <div class="container is-max-desktop">
+      <!-- Full Pipeline Video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Full Pipeline Video</h2>
+          <p>
+            A video showcasing our robot operating fully autonomously for 39 minutes! <br>
+            Small breaks occur when we refill the bin with new objects. The version
+            below is sped up 5x for a more engaging viewing experience. For the full 1x
+            speed version, see the link below.
+          </p>
+          <br>
           <div class="content has-text-centered">
-            <p>
-              Drake simulation recordings that demonstrate the simulatability of our assets.
-            </p>
+            <iframe style="aspect-ratio: 16 / 9; width: 100%;"
+              src="https://www.youtube.com/embed/UC1dN6VAfx8">
+            </iframe>
           </div>
-          <br>
 
-          <div class="content has-text-justified">
-            <h2 class="title is-5 has-text-centered">Recording Playback Instructions</h2>
-            <p class="has-text-centered">We recommend interacting with the simulation recordings:</p>
-            <p class="has-text-justified">
-              First, click the <i>Open Controls</i> button at the
-              top right corner to open the recording controls. Second, click the now visible <i>Scene</i> button to
-              collapse the unnecessary options. Third, click the <i>play</i> button to play the recording from the
-              start.
-              The playback speed can be adjusted using the <i>timeScale</i> input. It is possible to move around the
-              simulation recording using mouse controls.
-              If you see "No connection", wait a few seconds for the simulation to finish loading.
-            </p>
-          </div>
-          <br>
-
-          <div id="simulation-carousel" class="carousel results-carousel">
-            <div class="results-item">
-              <h2 class="title is-5 has-text-centered">Pushing - Inflator</h2>
-              <div class="content is-centered">
-                <embed type="text/html" src="./static/meshcat/inflator_push.html" height="100%"
-                  style="width: 100%; aspect-ratio: 1.5;">
-              </div>
-            </div>
-          
-            <div class="results-item">
-              <h2 class="title is-5 has-text-centered">Pushing - Spam</h2>
-              <div class="content is-centered">
-                <embed type="text/html" src="./static/meshcat/spam_push.html" height="100%"
-                  style="width: 100%; aspect-ratio: 1.5;">
-              </div>
-            </div>
-          
-            <div class="results-item">
-              <h2 class="title is-5 has-text-centered">Picking - Camera Mount</h2>
-              <div class="content is-centered">
-                <embed type="text/html" src="./static/meshcat/camera_mount_pick.html" height="100%"
-                  style="width: 100%; aspect-ratio: 1.5;">
-              </div>
-            </div>
-          
-            <div class="results-item">
-              <h2 class="title is-5 has-text-centered">Picking - Unitek</h2>
-              <div class="content is-centered">
-                <embed type="text/html" src="./static/meshcat/unitek_pick.html" height="100%"
-                  style="width: 100%; aspect-ratio: 1.5;">
-              </div>
-            </div>
-          
-            <div class="results-item">
-              <h2 class="title is-5 has-text-centered">Ramp - Mouthwash</h2>
-              <div class="content is-centered">
-                <embed type="text/html" src="./static/meshcat/mouth_wash_ramp.html" height="100%"
-                  style="width: 100%; aspect-ratio: 1.5;">
-              </div>
-            </div>
-          
-            <div class="results-item">
-              <h2 class="title is-5 has-text-centered">Ramp - Sugar Box</h2>
-              <div class="content is-centered">
-                <embed type="text/html" src="./static/meshcat/sugar_box_ramp.html" height="100%"
-                  style="width: 100%; aspect-ratio: 1.5;">
-              </div>
-            </div>
-          
-            <!-- And so on for your other slides -->
-          </div>
+          <p>Find the full, non sped-up version <a href="https://youtu.be/bBPMNGk7edg">here</a></p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container is-max-widescreen">
-      <div class="columns is-centered">
-        <div class="column is-10">
-          <h2 class="title is-3 has-text-centered">Sim vs Real Experiments</h2>
-          <div class="content has-text-centered">
-            <p>
-              Examples of interactions with our reconstructed assets in simulation and the original objects in the real world.
-              "Default Physics" refers to using our identified mass but not specifying a center of mass and rotational
-              inertia, resulting in the simulator using the default values for these parameters.
-            </p>
-          </div>
-          <br>
-          <br>
-          
-          <h3 class="title is-5 has-text-centered">PUSHING OVER</h3>
-          <div class="columns is-centered">
-            <!-- Wheel -->
-            <div class="column">
-              <div class="content is-centered">
-                <p class="has-text-centered"><b>INFLATOR</b></p>
-                <img src="./static/gifs/inflator_sim_real.gif">
-              </div>
-            </div>
-
-            <!-- Wheel -->
-            <div class="column">
-              <div class="content is-centered">
-                <p class="has-text-centered"><b>SPAM CAN</b></p>
-                <img src="./static/gifs/spam_sim_real.gif">
-              </div>
-            </div>
-          </div>
-          
-          <h3 class="title is-5 has-text-centered">PICK AND PLACE</h3>
-          <div class="columns is-centered">
-            <!-- Wheel -->
-            <div class="column">
-              <div class="content is-centered">
-                <p class="has-text-centered"><b>CAMERA MOUNT</b></p>
-                <img src="./static/gifs/camera_mount_real_sim.gif">
-              </div>
-            </div>
-
-            <!-- Wheel -->
-            <div class="column">
-              <div class="content is-centered">
-                <p class="has-text-centered"><b>UNITEK BOX</b></p>
-                <img src="./static/gifs/unitek_real_sim.gif">
-              </div>
-            </div>
-          </div>
-          
-          <h3 class="title is-5 has-text-centered">RAMP</h3>
-          <div class="columns is-centered">
-            <!-- Wheel -->
-            <div class="column">
-              <div class="content is-centered">
-                <p class="has-text-centered"><b>SUGAR BOX</b></p>
-                <img src="./static/gifs/sugar_box_sim_real.gif">
-              </div>
-            </div>
-
-            <!-- Wheel -->
-            <div class="column">
-              <div class="content is-centered">
-                <p class="has-text-centered"><b>MOUTHWASH</b></p>
-                <img src="./static/gifs/mouthwash_sim_real.gif">
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
+      <!--/ Full Pipeline Video. -->
     </div>
   </section>
 
