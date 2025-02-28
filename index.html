@@ -194,12 +194,14 @@
               geometry, and physical properties such as inertial parameters.
               Our approach introduces a general method for extracting high-
               quality, object-centric meshes from photometric reconstruction
-              techniques (e.g., NeRF, Gaussian Splatting). We validate the
-              full pipeline through extensive experiments, demonstrating its
-              effectiveness across diverse objects. By eliminating the need for
-              manual intervention or environment modifications, the pipeline
-              seamlessly integrates into existing pick-and-place setups, en-
-              abling scalable and efficient dataset creation.
+              techniques (e.g., NeRF, Gaussian Splatting) by employing alpha-
+              transparent training while explicitly distinguishing foreground
+              occlusions from background subtraction. We validate the full
+              pipeline through extensive experiments, demonstrating its ef-
+              fectiveness across diverse objects. By eliminating the need for
+              manual intervention or environment modifications, our pipeline
+              can be integrated directly into existing pick-and-place setups,
+              enabling scalable and efficient dataset creation.
             </p>
           </div>
         </div>
@@ -243,10 +245,10 @@
 
   <section class="section"></section>
   <div class="container is-max-desktop">
-    <!-- Pipeline Iteration Video. -->
+    <!-- Project Video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Pipeline Iteration Video</h2>
+        <h2 class="title is-3">Project Video</h2>
         <p>The following video shows a single pipeline iteration.</p>
         <!-- <p>The video has been sped up by a factor of 20.</p> -->
         <br>
@@ -257,26 +259,27 @@
         </div>
       </div>
     </div>
-    <!--/ Pipeline Iteration Video. -->
+    <!--/ Project Video. -->
   </div>
   </section>
 
   <section class="section">
     <div class="container is-max-desktop">
-      <!-- Full Video. -->
+      <!-- Full Pipeline Video. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3">Full Video</h2>
+          <h2 class="title is-3">Full Pipeline Video</h2>
           <br>
           <div class="content has-text-centered">
-            <video id="replay-video" controls muted preload playsinline width="75%">
-              <!-- TODO: This should embed a YouTube video. -->
-              <source src="./static/videos/robot_scanning_20x.mp4" type="video/mp4">
-            </video>
+            <iframe width="420" height="315"
+              src="https://youtu.be/UC1dN6VAfx8">
+            </iframe>
           </div>
+
+          <p>Find the full, non sped-up version <a href="https://youtu.be/bBPMNGk7edg">here</a></p>
         </div>
       </div>
-      <!--/ Full Video. -->
+      <!--/ Full Pipeline Video. -->
     </div>
   </section>
 
@@ -510,6 +513,62 @@
           
             <!-- And so on for your other slides -->
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <h2 class="title is-3 has-text-centered">Sim vs Real Experiments</h2>
+          <div class="content has-text-centered">
+            <p>
+              Examples of interactions with our reconstructed assets in simulation and the original objects in the real world.
+            </p>
+          </div>
+          <br>
+          <br>
+          
+          <h3 class="title is-5 has-text-centered">Pushing over</h3>
+          <div class="columns is-centered">
+            <!-- Wheel -->
+            <div class="column">
+              <div class="content is-centered">
+                <p class="has-text-centered"><b>Inflator</b></p>
+                <img src="./static/gifs/inflator_sim_real.gif">
+              </div>
+            </div>
+
+            <!-- Wheel -->
+            <div class="column">
+              <div class="content is-centered">
+                <p class="has-text-centered"><b>Spam can</b></p>
+                <img src="./static/gifs/spam_sim_real.gif">
+              </div>
+            </div>
+          </div>
+          
+          <h3 class="title is-5 has-text-centered">Pick and place</h3>
+          <div class="columns is-centered">
+            <!-- Wheel -->
+            <div class="column">
+              <div class="content is-centered">
+                <p class="has-text-centered"><b>Camera mount</b></p>
+                <img src="./static/gifs/camera_mount_real_sim.gif">
+              </div>
+            </div>
+
+            <!-- Wheel -->
+            <div class="column">
+              <div class="content is-centered">
+                <p class="has-text-centered"><b>Unitek box</b></p>
+                <img src="./static/gifs/unitek_real_sim.gif">
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
