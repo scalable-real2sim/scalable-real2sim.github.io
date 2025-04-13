@@ -3,9 +3,19 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Scalable Real2Sim: Physics-Aware Asset Generation Via Robotic Pick-and-Place Setups">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="description"
+    content="Scalable Real2Sim: Physics-Aware Asset Generation Via Robotic Pick-and-Place Setups">
+  <meta name="keywords" content="Real2Sim, Physics, Simulation, Robotics">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Tags for link preview -->
+  <meta property="og:title"
+    content="Scalable Real2Sim: Physics-Aware Asset Generation Via Robotic Pick-and-Place Setups" />
+  <meta property="og:description"
+    content="A fully automated pipeline that generates simulation-ready assets for real-world objects—no manual intervention required!" />
+  <meta property="og:image" content="./static/images/system_diagram.png" />
+  <meta property="og:url" content="https://scalable-real2sim.github.io/" />
+  <meta property="og:type" content="website" />
+
   <title>Scalable Real2Sim: Physics-Aware Asset Generation Via Robotic Pick-and-Place Setups</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -108,12 +118,14 @@
                 <a href="https://nepfaff.github.io/" class="author-link">Nicholas Pfaff</a><sup>1</sup>,&nbsp;&nbsp;
               </span>
               <span class="author-block">
-                <a href="https://www.linkedin.com/in/evelyn-fu02/" class="author-link">Evelyn Fu</a><sup>1</sup>,</span>&nbsp;&nbsp;
+                <a href="https://www.linkedin.com/in/evelyn-fu02/" class="author-link">Evelyn
+                  Fu</a><sup>1</sup>,</span>&nbsp;&nbsp;
               <span class="author-block">
                 <a href="https://jeremy-binagia.com/" class="author-link">Jeremy Binagia</a><sup>2</sup>,&nbsp;&nbsp;
               </span>
               <span class="author-block">
-                <a href="https://web.mit.edu/phillipi/" class="author-link">Phillip Isola</a><sup>1</sup>,</span>&nbsp;&nbsp;
+                <a href="https://web.mit.edu/phillipi/" class="author-link">Phillip
+                  Isola</a><sup>1</sup>,</span>&nbsp;&nbsp;
               <span class="author-block">
                 <a href="https://locomotion.csail.mit.edu/russt.html" class="author-link">Russ Tedrake</a><sup>1</sup>
               </span>
@@ -129,7 +141,7 @@
                 <!-- PDF Link. -->
                 <span class="link-block">
                   <a href="https://arxiv.org/abs/2503.00370" class="external-link button is-normal is-rounded is-dark">
-                  <!-- <a href="#" class="external-link button is-normal is-rounded is-dark has-tooltip-top"
+                    <!-- <a href="#" class="external-link button is-normal is-rounded is-dark has-tooltip-top"
                     style="color: gray; pointer-events: auto; cursor: default;" data-tooltip="Coming Soon"> -->
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -138,7 +150,8 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://www.youtube.com/watch?v=EdhKJsD5uew" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://www.youtube.com/watch?v=EdhKJsD5uew"
+                    class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-youtube"></i>
                     </span>
@@ -146,7 +159,8 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://github.com/nepfaff/scalable-real2sim" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/nepfaff/scalable-real2sim"
+                    class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
@@ -246,8 +260,8 @@
         <h2 class="title is-3">Overview Video</h2>
         <br>
         <div class="content has-text-centered">
-          <iframe style="aspect-ratio: 16 / 9; width: 100%;"
-            src="https://www.youtube.com/embed/EdhKJsD5uew" allowfullscreen>
+          <iframe style="aspect-ratio: 16 / 9; width: 100%;" src="https://www.youtube.com/embed/EdhKJsD5uew"
+            allowfullscreen>
           </iframe>
         </div>
       </div>
@@ -263,7 +277,8 @@
           <h2 class="title is-3 has-text-centered">Sim vs Real Experiments</h2>
           <div class="content has-text-centered">
             <p>
-              Examples of interactions with our reconstructed assets in simulation and the original objects in the real world.
+              Examples of interactions with our reconstructed assets in simulation and the original objects in the real
+              world.
               <br>
               "Default Physics" refers to using our identified mass but not specifying a center of mass and rotational
               inertia, resulting in the simulator using the default values for these parameters.
@@ -271,7 +286,7 @@
           </div>
           <br>
           <br>
-          
+
           <h3 class="title is-5 has-text-centered">PUSHING OVER</h3>
           <div class="columns is-centered">
             <!-- Wheel -->
@@ -290,7 +305,7 @@
               </div>
             </div>
           </div>
-          
+
           <h3 class="title is-5 has-text-centered">PICK AND PLACE</h3>
           <div class="columns is-centered">
             <!-- Wheel -->
@@ -309,7 +324,7 @@
               </div>
             </div>
           </div>
-          
+
           <h3 class="title is-5 has-text-centered">RAMP</h3>
           <div class="columns is-centered">
             <!-- Wheel -->
@@ -369,7 +384,7 @@
                   style="width: 100%; aspect-ratio: 1.5;">
               </div>
             </div>
-          
+
             <div class="results-item">
               <h2 class="title is-5 has-text-centered">Pushing - Spam</h2>
               <div class="content is-centered">
@@ -377,7 +392,7 @@
                   style="width: 100%; aspect-ratio: 1.5;">
               </div>
             </div>
-          
+
             <div class="results-item">
               <h2 class="title is-5 has-text-centered">Picking - Camera Mount</h2>
               <div class="content is-centered">
@@ -385,7 +400,7 @@
                   style="width: 100%; aspect-ratio: 1.5;">
               </div>
             </div>
-          
+
             <div class="results-item">
               <h2 class="title is-5 has-text-centered">Picking - Unitek</h2>
               <div class="content is-centered">
@@ -393,7 +408,7 @@
                   style="width: 100%; aspect-ratio: 1.5;">
               </div>
             </div>
-          
+
             <div class="results-item">
               <h2 class="title is-5 has-text-centered">Ramp - Mouthwash</h2>
               <div class="content is-centered">
@@ -401,7 +416,7 @@
                   style="width: 100%; aspect-ratio: 1.5;">
               </div>
             </div>
-          
+
             <div class="results-item">
               <h2 class="title is-5 has-text-centered">Ramp - Sugar Box</h2>
               <div class="content is-centered">
@@ -409,7 +424,7 @@
                   style="width: 100%; aspect-ratio: 1.5;">
               </div>
             </div>
-          
+
             <!-- And so on for your other slides -->
           </div>
         </div>
@@ -494,9 +509,9 @@
                   <!-- Wheel -->
                   <div class="column">
                     <div class="content is-centered">
-                      <model-viewer class="is-centered" style="height: 480px; width: 480px;" alt="Raw Mesh" loading="lazy" field-of-view="45"
-                        src="./static/models/large_mustard.glb" ar camera-controls auto-rotate
-                        rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
+                      <model-viewer class="is-centered" style="height: 480px; width: 480px;" alt="Raw Mesh"
+                        loading="lazy" field-of-view="45" src="./static/models/large_mustard.glb" ar camera-controls
+                        auto-rotate rotation-per-second="30deg" camera-orbit="auto auto 5%" ar-status="not-presenting">
                       </model-viewer>
                     </div>
                   </div>
@@ -541,7 +556,7 @@
             <!--/ Collision geometry. -->
 
             <br>
-            
+
             <h2 class="title is-3 has-text-centered">Object-Centric Visual Reconstructions</h2>
             <!-- Visual mesh. -->
             <div>
@@ -583,8 +598,8 @@
           </p>
           <br>
           <div class="content has-text-centered">
-            <iframe style="aspect-ratio: 16 / 9; width: 100%;"
-              src="https://www.youtube.com/embed/UC1dN6VAfx8" allowfullscreen>
+            <iframe style="aspect-ratio: 16 / 9; width: 100%;" src="https://www.youtube.com/embed/UC1dN6VAfx8"
+              allowfullscreen>
             </iframe>
           </div>
 
