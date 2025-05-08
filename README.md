@@ -1,6 +1,4 @@
-# Object Real2Sim
 
-This is the repository that contains source code for the object real2sim website.
 The code is adopted from the [Nerfies website](https://nerfies.github.io).
 
 # Website License
